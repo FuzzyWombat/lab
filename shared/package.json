@@ -5,7 +5,8 @@
     "@swc/helpers": "~0.5.11"
   },
   "peerDependencies": {
-    "react": ">=16.8.6"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "type": "commonjs",
   "main": "./src/index.js",
