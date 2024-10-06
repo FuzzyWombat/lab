@@ -5,7 +5,7 @@ type Quote = {
     quote: string;
 }
 
-import axios from 'axios'
+import axios, {AxiosResponse} from 'axios'
 
 //CREATING SIDE EFFECTS FOR DAYS, FORGET FUNCTIONAL IMMUTABILITY WERE GOING IMPERITIVE BABY
 export default {
@@ -23,7 +23,7 @@ export default {
     methods: {
         loadQuotes: async function () {
             const response = await axios
-                .get(
+                .get<{quotes: Array<Quote>}>(
                     'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json'
                 )
                 .catch((error) => {
@@ -45,7 +45,7 @@ export default {
                     ]
                     this.numQuotes = this.quoteArray.length
                     this.getQuote()
-                })
+                }) as AxiosResponse<{quotes: Array<Quote>}>
 
             if (response?.data) {
                 this.quoteArray = response.data.quotes
