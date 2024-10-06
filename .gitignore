@@ -42,3 +42,4 @@ Thumbs.db
 .nx/workspace-data
 
 # package-lock due to registry differences
+package-lock.json
