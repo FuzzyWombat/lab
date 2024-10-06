@@ -6,8 +6,9 @@ module.exports = {
   output: {
     path: join(__dirname, '../../dist/apps/container'),
   },
+  ignoreWarnings: [/Failed to parse source map/],
   devServer: {
-    port: 4200,
+    port: 4201,
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,
