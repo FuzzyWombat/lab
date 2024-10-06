@@ -7,7 +7,7 @@ import App from './app/app';
 init({
     name: 'container',
     remotes: [
-        {name: 'Quotes', entry: `${process.env.REACT_APP_REMOTE_VUE}/mf-manifest.json`}
+        {name: 'Quotes', entry: `http://localhost:3001/mf-manifest.json`}
     ],
     shared: {}
 })
