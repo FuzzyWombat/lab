@@ -1,0 +1,21 @@
+{
+  "name": "quote-rsbuild",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "font-awesome": "^4.7.0",
+    "vue": "^3.5.3"
+  },
+  "devDependencies": {
+    "@module-federation/enhanced": "^0.6.9",
+    "@rsbuild/core": "^1.0.1",
+    "@rsbuild/plugin-vue": "^1.0.1",
+    "typescript": "^5.5.2"
+  }
+}
