@@ -15,9 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lab/mylib": ["mylib/src/index.ts"],
       "@lab/shared": ["shared/src/index.ts"],
-      "@lab/utility-components": ["utility-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
