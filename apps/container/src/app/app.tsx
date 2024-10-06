@@ -1,9 +1,11 @@
-import NxWelcome from './nx-welcome';
+import VueLoader from "../components/VueLoader";
+//Lib Components
+import {ErrorBoundary} from '@lab/shared'
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="container" />
+      <ErrorBoundary><VueLoader /></ErrorBoundary>
     </div>
   );
 }

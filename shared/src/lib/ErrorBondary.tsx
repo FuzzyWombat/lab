@@ -10,19 +10,19 @@ type State = {
 }
 
 export class ErrorBoundary extends React.Component<ErrorBoundaryProps> {
-    public state: State = {hasError: false}
+    public override state: State = {hasError: false}
   
     static getDerivedStateFromError(_: Error): State {
       // Update state so the next render will show the fallback UI.
       return { hasError: true };
     }
   
-    componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+    override componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
       // You can also log the error to an error reporting service
       console.error('Error Boundary Error: ',error,errorInfo)
     }
   
-    render() {
+    override render() {
       if (this.state.hasError) {
         return this.props.fallback ? this.props.fallback : <section>Something Went Wrong. Please Try Again!</section>
       }
