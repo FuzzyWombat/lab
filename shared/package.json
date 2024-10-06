@@ -4,6 +4,9 @@
   "dependencies": {
     "@swc/helpers": "~0.5.11"
   },
+  "peerDependencies": {
+    "react": ">=16.8.6"
+  },
   "type": "commonjs",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
