@@ -6,14 +6,16 @@ module.exports = {
   output: {
     path: join(__dirname, '../../dist/apps/container'),
   },
-  ignoreWarnings: [/Failed to parse source map/],
   devServer: {
-    port: 4201,
+    port: 4206,
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,
       htmlAcceptHeaders: ['text/html', 'application/xhtml+xml'],
     },
+    client: {
+      overlay: false
+  }
   },
   plugins: [
     new NxAppWebpackPlugin({
