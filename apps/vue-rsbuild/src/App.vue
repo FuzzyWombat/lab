@@ -12,12 +12,12 @@ export default {
     name: 'app',
     data() {
         return {
-            quote: '',
-            author: '',
+            quote: 'Loading',
+            author: 'Loading',
             quoteArray: [] as Array<Quote>,
             numQuotes: 0,
             tweet: 'twitter.com/intent/tweet',
-            randomColor: ''
+            randomColor: 'red'
         }
     },
     methods: {
