@@ -7,7 +7,7 @@ module.exports = {
     path: join(__dirname, '../../dist/apps/container'),
   },
   devServer: {
-    port: 4206,
+    port: 4200,
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,
