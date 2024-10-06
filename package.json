@@ -5,6 +5,11 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@module-federation/enhanced": "^0.6.9",
+    "@module-federation/utilities": "^3.1.15",
+    "@salt-ds/core": "^1.36.0",
+    "@salt-ds/icons": "^1.12.1",
+    "@salt-ds/theme": "^1.22.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -33,7 +38,7 @@
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.13",
     "babel-jest": "^29.7.0",
-    "eslint": "^9.8.0",
+    "eslint": "8.57",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "2.30.0",
     "eslint-plugin-jsx-a11y": "6.7.1",

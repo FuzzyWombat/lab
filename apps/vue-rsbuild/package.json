@@ -1,5 +1,5 @@
 {
-  "name": "quote-rsbuild",
+  "name": "vue-rsbuild",
   "private": true,
   "version": "1.0.0",
   "scripts": {
