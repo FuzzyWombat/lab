@@ -1,5 +1,7 @@
 import React, { useRef, useEffect} from 'react';
 import {loadRemote} from '@module-federation/enhanced/runtime'
+//Lib Components
+import { ErrorBoundary } from '@lab/shared';
 
 export default () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,5 +14,5 @@ export default () => {
     })();
   }, []);
 
-  return <div ref={ref} />;
+  return <ErrorBoundary><div ref={ref} /></ErrorBoundary>;
 };

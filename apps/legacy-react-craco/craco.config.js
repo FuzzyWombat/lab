@@ -8,35 +8,34 @@ module.exports = {
   webpack: {
     configure: (webpackConfig) => {
         webpackConfig.resolve.fallback = {
-            path: false
+            path: false,
+        }
+
+        webpackConfig.optimization = {
+            runtimeChunk: false,
+            splitChunks: false
         }
 
         webpackConfig.output = {
-            scriptType: 'text/javascript',
-            publicPath: 'auto'
+            publicPath: 'auto',
+            scriptType: 'text/javascript'
         }
 
         return webpackConfig
         
     },
-    optimization: {
-        runtimeChunk: false
-    },
     plugins: {
       add: [
         new ModuleFederationPlugin({
-          name: "Legacy",
+          name: "fatboy",
           filename: "remoteEntry.js",
+          library: { type: 'var', name: 'fatboy' },
           exposes: {
             "./Test": "./src/components/Test",
           },
-          shared: {
-            react: { eager:true, import: 'react', singleton: true },
-            "react-dom": { eager:true, import: 'react-dom', singleton: true },
-          },
+          shared: {},
         }),
       ],
     },
   },
 };
-export {}

@@ -18,7 +18,6 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps> {
     }
   
     override componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
-      // You can also log the error to an error reporting service
       console.error('Error Boundary Error: ',error,errorInfo)
     }
   

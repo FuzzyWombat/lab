@@ -1,6 +1,9 @@
 import React from 'react';
+//React Adapter
+import { ReactAdapter } from './ReactAdapter'
 
-function Test() {
+
+function WrappedTest() {
   return (
     <div className="Test">
       <header className="Test-header">
@@ -19,5 +22,11 @@ function Test() {
     </div>
   );
 }
+
+const Test = React.forwardRef<ReactAdapter>((_,ref) => {
+    return <ReactAdapter component={WrappedTest} ref={ref} />
+})
+
+
 
 export default Test;

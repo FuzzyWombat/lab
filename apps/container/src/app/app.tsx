@@ -1,14 +1,16 @@
 import { Suspense } from "react";
+//Custom Components
 import VueLoader from "../components/VueLoader";
+import LegacyLoader from "../components/LegacyLoader";
 //Lib Components
 import {ErrorBoundary} from '@lab/shared'
 
 export function App() {
   return (
-    <div>
-      <ErrorBoundary><VueLoader /></ErrorBoundary>
-      <Suspense><ErrorBoundary><VueLoader /></ErrorBoundary></Suspense>
-    </div>
+    <ErrorBoundary>
+      <VueLoader />
+      <LegacyLoader />
+    </ErrorBoundary>
   );
 }
 
