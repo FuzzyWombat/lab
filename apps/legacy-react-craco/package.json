@@ -1,5 +1,5 @@
 {
-  "name": "legacy-react-craco",
+  "name": "@lab/legacy-react-craco",
   "homepage": ".",
   "version": "0.1.0",
   "private": true,
