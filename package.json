@@ -5,9 +5,10 @@
   "scripts": {
     "start:container": "nx serve container",
     "start:salt": "nx serve salt-nested-route",
-    "start:salt": "nx serve salt-nested-route",
-    "start:salt": "nx serve salt-nested-route",
-    "start:salt": "nx serve salt-nested-route",
+    "start:legacy": "npm run start --workspace=apps/legacy-react-craco",
+    "start:vue": "npm run start --workspace=apps/vue-rsbuild",
+    "start:remotes": "run-p start:vue start:legacy",
+    "start:demo": "run-p start:vue start:legacy start:container",
     "prettier:format": "prettier --write \"!**/dist\" \"**/*.js?(x)\" \"**/*.ts?(x)\""
   },
   "private": true,
