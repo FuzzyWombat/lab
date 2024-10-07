@@ -14,10 +14,10 @@ export default defineConfig({
             },
             plugins: [
                 new ModuleFederationPlugin({
-                    name: 'Quotes',
+                    name: 'Vue',
                     filename: 'remoteEntry.js',
                     exposes: {
-                        './QuotesApp': './src/remote.ts',
+                        './VueApp': './src/remote.ts',
                     },
                 }),
             ],

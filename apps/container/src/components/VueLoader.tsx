@@ -8,7 +8,7 @@ export default () => {
 
     useEffect(() => {
         (async () => {
-            const { mount } = (await loadRemote('Quotes/QuotesApp', { from: 'runtime' })) as {
+            const { mount } = (await loadRemote('Vue/VueApp', { from: 'runtime' })) as {
                 mount: (element: HTMLDivElement) => void;
             };
 
