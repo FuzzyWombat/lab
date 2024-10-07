@@ -1,4 +1,4 @@
-const { ModuleFederationPlugin } = require("webpack").container;
+const { ModuleFederationPlugin } = require("@module-federation/enhanced/webpack")
 
 module.exports = {
   devServer: {
@@ -10,12 +10,6 @@ module.exports = {
         webpackConfig.resolve.fallback = {
             path: false,
         }
-
-        webpackConfig.optimization = {
-            runtimeChunk: false,
-            splitChunks: false
-        }
-
         webpackConfig.output = {
             publicPath: 'auto',
             scriptType: 'text/javascript'
@@ -24,16 +18,18 @@ module.exports = {
         return webpackConfig
         
     },
+    optimization: {
+      runtimeChunk: false,
+      splitChunks: false
+   },
     plugins: {
       add: [
         new ModuleFederationPlugin({
-          name: "fatboy",
+          name: "Legacy",
           filename: "remoteEntry.js",
-          library: { type: 'var', name: 'fatboy' },
           exposes: {
             "./Test": "./src/components/Test",
           },
-          shared: {},
         }),
       ],
     },

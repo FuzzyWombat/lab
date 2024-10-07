@@ -7,7 +7,8 @@ import App from './app/app';
 init({
     name: 'container',
     remotes: [
-        {name: 'Quotes', entry: `http://localhost:3001/mf-manifest.json`}
+        {name: 'Quotes', entry: `http://localhost:3001/mf-manifest.json`},
+        {name: 'Legacy', entry: `http://localhost:3002/mf-manifest.json`}
     ],
     shared: {}
 })
