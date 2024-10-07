@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:container": "nx serve container",
+    "start:salt": "nx serve salt-nested-route",
     "prettier:format": "prettier --write \"!**/dist\" \"**/*.js?(x)\" \"**/*.ts?(x)\""
   },
   "private": true,
