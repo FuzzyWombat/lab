@@ -7,13 +7,13 @@ import { init } from '@module-federation/enhanced/runtime';
 runtime can be placed inside of react tree and doesn't have to live outside of react
 */
 //Custom Components
-import Error from '../components/common/Error';
-import Spinner from '../components/common/Spinner';
-import VueRemote from '../routes/VueRemote';
-import LegacyRemote from '../routes/LegacyRemote';
+import Error from './components/common/Error';
+import Spinner from './components/common/Spinner';
+import VueRemote from './routes/VueRemote';
+import LegacyRemote from './routes/LegacyRemote';
 //Routes
-import Root from '../routes/Root';
-import Home from '../routes/Home';
+import Root from './routes/Root';
+import Home from './routes/Home';
 
 export function App() {
     console.log('container: ', React.version);

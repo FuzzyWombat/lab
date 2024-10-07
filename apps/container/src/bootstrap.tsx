@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { init } from '@module-federation/enhanced/runtime';
 //Custom Components
-import App from './app/app';
+import App from './App';
 // Import theme CSS
 import '@salt-ds/theme/index.css';
 
