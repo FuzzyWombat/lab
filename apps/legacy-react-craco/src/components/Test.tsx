@@ -1,5 +1,5 @@
 import React from 'react';
-//React Adapter
+//React Adapter -> unable to properly npm link @lab/shared, so movd it into project
 import { ReactAdapter } from './ReactAdapter'
 
 

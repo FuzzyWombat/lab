@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import React from "react"
-import ReactDOM, { hydrate }  from "react-dom"
+import ReactDOM  from "react-dom"
 
 export type ReactAdapterProps<P = {}> = P & {
     component: React.FunctionComponent<P> | React.ComponentClass<P> | keyof React.ReactHTML | string;
