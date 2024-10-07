@@ -3,7 +3,7 @@ import { loadRemote } from '@module-federation/enhanced/runtime';
 //Shared Lib
 import { ErrorBoundary } from '@lab/shared';
 //Custom Components
-import Fallback from '../common/FallBack';
+import Fallback from '../components/common/FallBack';
 
 const LegacyRemote = lazy(
     () =>

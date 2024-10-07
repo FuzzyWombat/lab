@@ -3,7 +3,7 @@ import { loadRemote } from '@module-federation/enhanced/runtime';
 //Lib Components
 import { ErrorBoundary } from '@lab/shared';
 //Custom Components
-import Fallback from '../common/FallBack';
+import Fallback from '../components/common/FallBack';
 
 export default () => {
     const ref = useRef<HTMLDivElement>(null);
