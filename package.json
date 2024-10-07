@@ -8,12 +8,16 @@
   },
   "private": true,
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.14",
+    "@fontsource/pt-mono": "^4.5.11",
     "@module-federation/enhanced": "^0.6.9",
     "@salt-ds/core": "^1.36.0",
     "@salt-ds/icons": "^1.12.1",
     "@salt-ds/theme": "^1.22.0",
+    "@tanstack/react-query": "^5.28.8",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@babel/core": "7.14.5",
@@ -65,5 +69,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^6.0.1"
   },
-  "workspaces": ["apps/*", "shared/*"]
+  "workspaces": [
+    "apps/*",
+    "shared/*"
+  ]
 }
