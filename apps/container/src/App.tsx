@@ -9,11 +9,13 @@ runtime can be placed inside of react tree and doesn't have to live outside of r
 //Custom Components
 import Error from './components/common/Error';
 import Spinner from './components/common/Spinner';
-import VueRemote from './routes/VueRemote';
-import LegacyRemote from './routes/LegacyRemote';
 //Routes
 import Root from './routes/Root';
 import Home from './routes/Home';
+import VueRemote from './routes/VueRemote';
+import LegacyRemote from './routes/LegacyRemote';
+//Salt Route to be worked on
+//import SaltRemote from './routes/SaltRemote
 
 export function App() {
     console.log('container: ', React.version);
@@ -39,6 +41,16 @@ export function App() {
                     path: '/quote',
                     element: <VueRemote />,
                 },
+                /*
+                uncomment and place Salt Remote here
+
+                go to Root component and add path to Navigation Bar Array to link component
+                {
+                    path:,
+                    element: ,
+                },
+
+                */
             ],
         },
     ]);
