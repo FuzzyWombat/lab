@@ -3,7 +3,8 @@ import * as ReactDOM from 'react-dom/client';
 import { init } from '@module-federation/enhanced/runtime';
 //Custom Components
 import App from './App';
-// Import theme CSS
+// Import Styles
+import './styles/index.css'
 import '@salt-ds/theme/index.css';
 
 //Custom Font Styles
