@@ -3,7 +3,12 @@ import { loadRemote } from '@module-federation/enhanced/runtime';
 //Shared Lib
 import { ErrorBoundary } from '@lab/shared';
 
-const LegacyRemote = lazy(() => loadRemote('Legacy/Test', { from: 'runtime' }) as any);
+const LegacyRemote = lazy(
+    () =>
+        loadRemote('Legacy/Test', { from: 'runtime' }) as Promise<{
+            default: React.ComponentType<Record<string, unknown>>;
+        }>
+);
 
 export default () => {
     return (
