@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export type ReactAdapterProps<P = {}> = P & {
+export type ReactAdapterProps<P = Record<string, unknown>> = P & {
     component: React.FunctionComponent<P> | React.ComponentClass<P> | keyof React.ReactHTML | string;
     children?: React.ReactNode;
 };
@@ -11,7 +11,7 @@ export type ReactAdapterState = {
     Component: React.ReactNode;
 };
 
-export class ReactAdapter<P = {}> extends React.Component<ReactAdapterProps<P>, ReactAdapterState> {
+export class ReactAdapter<P = Record<string, unknown>> extends React.Component<ReactAdapterProps<P>, ReactAdapterState> {
     private refHold: HTMLDivElement | null = null;
 
     constructor(props: ReactAdapterProps<P>) {

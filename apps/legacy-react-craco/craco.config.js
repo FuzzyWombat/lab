@@ -14,7 +14,6 @@ module.exports = {
                 publicPath: 'auto',
                 scriptType: 'text/javascript',
             };
-
             return webpackConfig;
         },
         optimization: {
