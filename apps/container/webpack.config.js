@@ -7,7 +7,7 @@ module.exports = {
         path: join(__dirname, '../../dist/apps/container'),
     },
     devServer: {
-        port: 4200,
+        port: 'auto',
         historyApiFallback: {
             index: '/index.html',
             disableDotRule: true,
@@ -16,6 +16,7 @@ module.exports = {
         client: {
             overlay: false,
         },
+        open: true,
     },
     plugins: [
         new NxAppWebpackPlugin({

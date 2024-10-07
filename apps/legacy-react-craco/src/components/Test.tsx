@@ -3,6 +3,7 @@ import React from 'react';
 import { ReactAdapter } from './ReactAdapter';
 
 function WrappedTest() {
+    console.log('legacy-react-craco: ', React.version);
     return (
         <div className='Test'>
             <header className='Test-header'>

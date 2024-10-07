@@ -7,7 +7,7 @@ type Quote = {
 
 import axios, {AxiosResponse} from 'axios'
 
-//CREATING SIDE EFFECTS FOR DAYS, FORGET FUNCTIONAL IMMUTABILITY WERE GOING IMPERITIVE BABY
+//FORGET FUNCTIONAL IMMUTABILITY WERE GOING IMPERITIVE BABY
 export default {
     name: 'app',
     data() {

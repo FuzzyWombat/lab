@@ -11,7 +11,10 @@ export type ReactAdapterState = {
     Component: React.ReactNode;
 };
 
-export class ReactAdapter<P = Record<string, unknown>> extends React.Component<ReactAdapterProps<P>, ReactAdapterState> {
+export class ReactAdapter<P = Record<string, unknown>> extends React.Component<
+    ReactAdapterProps<P>,
+    ReactAdapterState
+> {
     private refHold: HTMLDivElement | null = null;
 
     constructor(props: ReactAdapterProps<P>) {

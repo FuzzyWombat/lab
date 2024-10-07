@@ -7,17 +7,7 @@ import LegacyLoader from '../components/LegacyLoader';
 import { ErrorBoundary } from '@lab/shared';
 
 export function App() {
-    /*
-  init({
-    name: 'container',
-    remotes: [
-        {name: 'Quotes', entry: `http://localhost:3001/mf-manifest.json`},
-        {name: 'Legacy', entry: `http://localhost:3002/mf-manifest.json`}
-    ],
-    shared: {},
-    plugins: []
-})
-    */
+    console.log('container: ', React.version);
 
     return (
         <ErrorBoundary>
