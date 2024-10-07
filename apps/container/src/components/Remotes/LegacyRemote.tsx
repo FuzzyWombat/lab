@@ -14,7 +14,7 @@ const LegacyRemote = lazy(
 
 export default () => {
     return (
-        <ErrorBoundary fallback={<Fallback/>}>
+        <ErrorBoundary fallback={<Fallback />}>
             <Suspense>
                 <LegacyRemote />
             </Suspense>

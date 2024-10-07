@@ -1,9 +1,7 @@
 import React from 'react';
 
 export const Error: React.FC = () => {
-    return (
-       <div>Root</div>
-    );
+    return <div>Root</div>;
 };
 
-export default Error
+export default Error;

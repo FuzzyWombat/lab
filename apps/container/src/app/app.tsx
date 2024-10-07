@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { SaltProvider } from '@salt-ds/core';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 /*
 import { init } from '@module-federation/enhanced/runtime';
@@ -19,27 +20,33 @@ export function App() {
 
     const router = createBrowserRouter([
         {
-            element: <Root/>,
-            errorElement: <Error/>,
+            element: <Root />,
+            errorElement: <Error />,
             children: [
                 {
                     path: '/',
-                    element: (<Suspense fallback={<Spinner/>}><Home/></Suspense>)
+                    element: (
+                        <Suspense fallback={<Spinner />}>
+                            <Home />
+                        </Suspense>
+                    ),
                 },
                 {
                     path: '/legacy',
-                    element: <LegacyRemote/>
+                    element: <LegacyRemote />,
                 },
                 {
                     path: '/quote',
-                    element: <VueRemote/>
-                }
-            ]
-        }
-    ])
+                    element: <VueRemote />,
+                },
+            ],
+        },
+    ]);
 
     return (
-        <RouterProvider router={router}/>
+        <SaltProvider>
+            <RouterProvider router={router} />
+        </SaltProvider>
     );
 }
 
