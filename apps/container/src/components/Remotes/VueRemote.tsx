@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import { loadRemote } from '@module-federation/enhanced/runtime';
 //Lib Components
 import { ErrorBoundary } from '@lab/shared';
+//Custom Components
+import Fallback from '../common/FallBack';
 
 export default () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -17,7 +19,7 @@ export default () => {
     }, []);
 
     return (
-        <ErrorBoundary>
+        <ErrorBoundary fallback={<Fallback />}>
             <div ref={ref} />
         </ErrorBoundary>
     );

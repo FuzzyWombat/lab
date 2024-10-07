@@ -2,6 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { loadRemote } from '@module-federation/enhanced/runtime';
 //Shared Lib
 import { ErrorBoundary } from '@lab/shared';
+//Custom Components
+import Fallback from '../common/FallBack';
 
 const LegacyRemote = lazy(
     () =>
@@ -12,7 +14,7 @@ const LegacyRemote = lazy(
 
 export default () => {
     return (
-        <ErrorBoundary>
+        <ErrorBoundary fallback={<Fallback/>}>
             <Suspense>
                 <LegacyRemote />
             </Suspense>
