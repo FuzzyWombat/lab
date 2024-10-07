@@ -4,7 +4,7 @@ import { init } from '@module-federation/enhanced/runtime';
 //Custom Components
 import App from './App';
 // Import Styles
-import './styles/index.css'
+import './styles/index.css';
 import '@salt-ds/theme/index.css';
 
 //Custom Font Styles
@@ -27,7 +27,7 @@ init({
     remotes: [
         { name: 'Vue', entry: `http://localhost:3001/mf-manifest.json` },
         { name: 'Legacy', entry: `http://localhost:3002/mf-manifest.json` },
-        //Remote entry goes here? 
+        //Remote entry goes here?
     ],
     shared: {},
     plugins: [],

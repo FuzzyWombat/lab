@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const Fallback: React.FC = () => {
-    return <div>Fallback</div>;
+export const NavigationBar: React.FC = () => {
+    return <div>NavigationBar</div>;
 };
 
-export default Fallback;
+export default NavigationBar;

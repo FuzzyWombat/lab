@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const Fallback: React.FC = () => {
-    return <div>Fallback</div>;
+export const Header: React.FC = () => {
+    return <div>Header</div>;
 };
 
-export default Fallback;
+export default Header;
