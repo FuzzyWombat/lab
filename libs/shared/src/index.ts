@@ -1,2 +1,2 @@
 export * from './lib/ErrorBondary';
-export * from './lib/ReactAdapter'
+export * from './lib/ReactAdapter';

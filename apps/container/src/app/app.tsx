@@ -1,14 +1,13 @@
-import React, {useEffect} from "react";
-import {init} from '@module-federation/enhanced/runtime'
+import React, { useEffect } from 'react';
+import { init } from '@module-federation/enhanced/runtime';
 //Custom Components
-import VueLoader from "../components/VueLoader";
-import LegacyLoader from "../components/LegacyLoader";
+import VueLoader from '../components/VueLoader';
+import LegacyLoader from '../components/LegacyLoader';
 //Lib Components
-import {ErrorBoundary} from '@lab/shared'
+import { ErrorBoundary } from '@lab/shared';
 
 export function App() {
-
-  /*
+    /*
   init({
     name: 'container',
     remotes: [
@@ -20,14 +19,12 @@ export function App() {
 })
     */
 
-  return (
-    <ErrorBoundary>
-      <VueLoader />
-      <LegacyLoader />
-    </ErrorBoundary>
-  );
+    return (
+        <ErrorBoundary>
+            <VueLoader />
+            <LegacyLoader />
+        </ErrorBoundary>
+    );
 }
-
-
 
 export default App;

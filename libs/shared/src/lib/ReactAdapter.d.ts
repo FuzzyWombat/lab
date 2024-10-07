@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 export type ReactAdapterProps<P = {}> = P & {
     component: React.FunctionComponent<P> | React.ComponentClass<P> | keyof React.ReactHTML | string;
     children?: React.ReactNode;
@@ -12,5 +12,5 @@ export declare class ReactAdapter<P = {}> extends React.Component<ReactAdapterPr
     init: (hydrate?: boolean) => void;
     componentDidUpdate(): void;
     componentDidMount(): void;
-    render(): import("react/jsx-runtime").JSX.Element;
+    render(): import('react/jsx-runtime').JSX.Element;
 }

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:container": "nx serve container"
+    "start:container": "nx serve container",
+    "prettier:format": "prettier --write \"!**/dist\" \"**/*.js?(x)\" \"**/*.ts?(x)\""
   },
   "private": true,
   "dependencies": {

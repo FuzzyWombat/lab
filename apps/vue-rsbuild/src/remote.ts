@@ -5,7 +5,7 @@ import App from './App.vue';
 export const mount = (element: HTMLElement) => {
     const app = createApp(App);
 
-    app.mount(element)
-}
+    app.mount(element);
+};
 
-export default mount
+export default mount;
