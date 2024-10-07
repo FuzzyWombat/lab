@@ -1,0 +1,9 @@
+{
+  "name": "salt-nested-route",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/salt-nested-route/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project salt-nested-route --web",
+  "targets": {}
+}
