@@ -3,10 +3,11 @@ const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
 const { ModuleFederationPlugin } = require('@module-federation/enhanced/webpack');
 const { join } = require('path');
 
+//3 values besides the expose{} have been removed, find and replace the 3 values to get module federation working
+
 module.exports = {
     output: {
         path: join(__dirname, '../../dist/apps/salt-nested-route'),
-        publicPath: 'auto',
         scriptType: 'text/javascript',
         uniqueName: 'Salt',
     },
@@ -24,7 +25,6 @@ module.exports = {
             'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
         },
     },
-    optimization: { runtimeChunk: false, splitChunks: false },
     plugins: [
         new ModuleFederationPlugin({
             name: 'Salt',
