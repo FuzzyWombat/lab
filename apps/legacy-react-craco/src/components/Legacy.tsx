@@ -85,7 +85,7 @@ function WrappedLegacy() {
     return (
         <div className='flex flex-col flex-grow items-center justify-center w-full' style={{ height: 750 }}>
             <div style={{ padding: 24, fontSize: 18 }}>
-                <b>{`Cross Communication Event Demo (Remote '/crosser' API Fetch & React Version:${React.version})`}</b>
+                <b>{`Cross Communication Demo (Remote '/crosser' API Fetch & React Version:${React.version}) w/Event Trigger`}</b>
             </div>
             {cards.length === 0 ? (
                 <button onClick={() => fetchCards()}>Refetch</button>

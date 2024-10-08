@@ -42,7 +42,7 @@ export const SubHeader: React.FC = () => {
                     </StackLayout>
                 </FlexLayout>
                 <span style={{ fontSize: 18 }} className='text-center w-full'>
-                    <b>{`Sub Header (Container App '/stats' API Fetch & React Version:${React.version})`}</b>
+                    <b>{`Sub Header (Container App '/stats' API Fetch & React Version:${React.version}) w/Event Listener`}</b>
                 </span>
             </StackLayout>
         </FlexLayout>
