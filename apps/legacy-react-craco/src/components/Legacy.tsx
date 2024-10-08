@@ -20,6 +20,7 @@ function WrappedLegacy() {
 
     console.log('legacy-react-craco: ', React.version);
 
+    //In integrated repo, React Query can be used instead
     const fetchCards = useCallback(async () => {
         const response = await (
             (await fetch(`${window.location.origin}/crossers`, { method: 'GET' })).json() as Promise<ResponseData>
