@@ -3,9 +3,19 @@ import { Link } from 'react-router-dom';
 import { SaltProvider, StackLayout, NavigationItem } from '@salt-ds/core';
 
 export const NavigationBar: React.FC<{ linkRoutes: Array<{ link: string; label: string }> }> = ({ linkRoutes }) => {
-    const [active, setActive] = useState('Home');
+    const [active, setActive] = useState(() => {
+        const active = sessionStorage.getItem('active')
+
+        if(!active || active === null){
+            return 'Home'
+        }
+
+        return active
+    });
 
     const handleNavigation = useCallback((event: React.SyntheticEvent, label: string) => {
+        sessionStorage.setItem('active', label)
+
         setActive(() => label);
     }, []);
 
