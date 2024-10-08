@@ -1,5 +1,4 @@
-import React, { Suspense } from 'react';
-import { SaltProvider } from '@salt-ds/core';
+import React, { Suspense, useState, useEffect } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 /*
 import { init } from '@module-federation/enhanced/runtime';
@@ -19,7 +18,16 @@ import LegacyRemote from './routes/LegacyRemote';
 //import SaltRemote from './routes/SaltRemote
 
 export function App() {
+    const [isReady, setReady] = useState(false);
     console.log('container: ', React.version);
+
+    useEffect(() => {
+        (async () => {
+            await import('./mocks/browser');
+
+            setReady(true);
+        })();
+    });
 
     const router = createBrowserRouter([
         {
@@ -56,11 +64,11 @@ export function App() {
         },
     ]);
 
-    return (
-        <SaltProvider>
-            <RouterProvider router={router} />
-        </SaltProvider>
-    );
+    if (!isReady) {
+        return <Spinner />;
+    }
+
+    return <RouterProvider router={router} />;
 }
 
 export default App;

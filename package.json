@@ -77,5 +77,10 @@
   "workspaces": [
     "apps/*",
     "libs/*"
-  ]
+  ],
+  "msw": {
+    "workerDirectory": [
+      "apps\\container\\src\\assets"
+    ]
+  }
 }
