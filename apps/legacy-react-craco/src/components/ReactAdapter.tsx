@@ -41,6 +41,6 @@ export class ReactAdapter<P = Record<string, unknown>> extends React.Component<
     }
 
     override render() {
-        return <div ref={(ref) => (this.refHold = ref)} />;
+        return <div style={{ display: 'flex', flexDirection: 'column' }} ref={(ref) => (this.refHold = ref)} />;
     }
 }

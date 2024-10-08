@@ -32,21 +32,14 @@ export const handlers = [
             });
 
             return HttpResponse.json({
-                crossers,
+                activeCrossers: crossers?.activeCrossers ? crossers.activeCrossers : [],
+                inactiveCrossers: crossers?.inactiveCrossers ? crossers.inactiveCrossers : [],
             });
         } catch (error) {
             console.log(error);
         }
     }),
-    http.post(`${window.location.origin}/cross/:id`, async ({ request, params }) => {
-        const { id } = params;
-        
-        return HttpResponse.json({
-            crossed: 0,
-            notCrossed: 0,
-        });
-    }),
-    http.post(`${window.location.origin}/uncross/:id`, async ({ request, params }) => {
+    http.post(`${window.location.origin}/switch/:id`, async ({ request, params }) => {
         const { id } = params;
 
         return HttpResponse.json({

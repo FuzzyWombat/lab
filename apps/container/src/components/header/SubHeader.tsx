@@ -27,13 +27,11 @@ export const SubHeader: React.FC = () => {
         <FlexLayout dir='row' justify='center' gap={20}>
             <StackLayout dir='column' gap={0} className='text-center'>
                 <span className='text-9xl text-teal-500 font-thin'>{data?.crossed}</span>
-                <span className='text-2xl'>Active</span>
-                <span className='text-2xl'>Barrier Crossers</span>
+                <span className='text-2xl'>Active Crossed Cards</span>
             </StackLayout>
             <StackLayout dir='column' gap={0} className='text-center'>
                 <span className='text-9xl text-teal-500 font-thin'>{data?.notCrossed}</span>
-                <span className='text-2xl'>Inactive</span>
-                <span className='text-2xl'>Barrier Crossers</span>
+                <span className='text-2xl'>Inactive Crossed Cards</span>
             </StackLayout>
         </FlexLayout>
     );
