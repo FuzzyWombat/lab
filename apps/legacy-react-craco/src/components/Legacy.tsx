@@ -32,13 +32,17 @@ function WrappedLegacy() {
     }, [setCards, setLoading]);
 
     const handleSwitch = useCallback(
-        async (id: string) => {
-            const response = (await fetch(`${window.location.origin}/switch/${id}`, { method: 'POST' }).catch((error) =>
-                console.error(error)
+        async (id: number, status: string) => {
+            const refetchStatus = new CustomEvent('stats-refetch');
+
+            const response = (await fetch(`${window.location.origin}/switch/${status}/${id}`, { method: 'POST' }).catch(
+                (error) => console.error(error)
             )) as Response;
 
             if (response?.ok) {
                 fetchCards();
+
+                document.dispatchEvent(refetchStatus);
             }
         },
         [fetchCards]
@@ -51,7 +55,7 @@ function WrappedLegacy() {
     const LegacyCard: React.FC<TCard> = ({ name, status, id }) => {
         return (
             <Card>
-                <section className='flex flex-col text-center' style={{ padding: 24 }}>
+                <section className='flex flex-col text-center' style={{ padding: 12 }}>
                     <span style={{ fontSize: 14, color: status === 'crossed' ? 'green' : 'red' }}>
                         <b>{status}</b>
                     </span>
@@ -59,6 +63,11 @@ function WrappedLegacy() {
                         <b style={{ fontSize: 18 }}>{name}</b>
                     </span>
                 </section>
+                <div style={{ paddingLeft: 12, paddingBottom: 12, paddingRight: 12 }}>
+                    <button onClick={() => handleSwitch(id, status)}>
+                        {status === 'crossed' ? 'uncross' : 'cross'}
+                    </button>
+                </div>
             </Card>
         );
     };
@@ -75,8 +84,10 @@ function WrappedLegacy() {
 
     return (
         <div className='flex flex-col flex-grow items-center justify-center w-full' style={{ height: 750 }}>
+            <div style={{ padding: 24, fontSize: 18 }}>
+                <b>{`Cross Communication Event Demo (Remote API Fetch & React Version:${React.version})`}</b>
+            </div>
             <div className='flex flex-row'>
-                {' '}
                 {cards.map((card) => {
                     return (
                         <div style={{ margin: 32 }}>

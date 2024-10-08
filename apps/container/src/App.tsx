@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 /*
 import { init } from '@module-federation/enhanced/runtime';
