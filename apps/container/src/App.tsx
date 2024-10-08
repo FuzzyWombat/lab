@@ -18,15 +18,11 @@ import LegacyRemote from './routes/LegacyRemote';
 //import SaltRemote from './routes/SaltRemote
 
 export function App() {
-    const [isReady, setReady] = useState(false);
-
     console.log('container: ', React.version);
 
     useEffect(() => {
         (async () => {
             await import('./mocks/browser');
-
-            setReady(true);
         })();
     });
 
@@ -64,10 +60,6 @@ export function App() {
             ],
         },
     ]);
-
-    if (!isReady) {
-        return <Spinner />;
-    }
 
     return <RouterProvider router={router} />;
 }

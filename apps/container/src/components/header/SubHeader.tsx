@@ -1,16 +1,27 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import { useQuery, queryOptions } from '@tanstack/react-query';
 
+type responseData = { crossed: number; notCrossed: number };
+
 export const SubHeader: React.FC = () => {
-    //const {data, refetch} = useQuery(queryOptions({queryKey: ['stats'], queryFn: async () => await ((await fetch(`${window.location.origin}/stats`, {method: 'GET'})).json())}))
+    const { data, refetch } = useQuery(
+        queryOptions({
+            queryKey: ['stats'],
+            queryFn: async () =>
+                await ((
+                    await fetch(`${window.location.origin}/stats`, { method: 'GET' })
+                ).json() as Promise<responseData>),
+        })
+    );
 
     useEffect(() => {
-        (async () => {
-            const response = await (await fetch(`${window.location.origin}/assets/stats`, { method: 'GET' })).json();
+        document.addEventListener('stats-refetch', () => refetch())
 
-            console.log(response);
-        })();
-    });
+        return () => {
+            document.removeEventListener('stats-refetch', () => refetch())
+        }
+
+    })
 
     return <div className='' style={{ height: 45 }} />;
 };
