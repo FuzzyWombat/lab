@@ -1,6 +1,11 @@
 @tailwind components;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+@property --saltScrim-background{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(0,0,0,.2);
+}
 
 body, html, #root{
     margin: 0;
