@@ -1,3 +1,18 @@
 @tailwind components;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+
+body, html, #root{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*, html, body, #root{
+    scroll-behavior: smooth !important;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+}

@@ -117,7 +117,8 @@ body {
 
 main {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    height: 100%;
     align-items: center;
     justify-content: center;
 }

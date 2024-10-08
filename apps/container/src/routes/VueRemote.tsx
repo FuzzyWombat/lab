@@ -20,7 +20,7 @@ export default () => {
 
     return (
         <ErrorBoundary fallback={<Fallback />}>
-            <div ref={ref} />
+            <div className='flex flex-col h-full' ref={ref} />
         </ErrorBoundary>
     );
 };
