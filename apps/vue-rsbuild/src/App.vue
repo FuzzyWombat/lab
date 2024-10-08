@@ -48,6 +48,8 @@ export default {
                 }) as AxiosResponse<{quotes: Array<Quote>}>
 
             if (response?.data) {
+                sessionStorage.setItem('quotes', JSON.stringify(response.data.quotes))
+
                 this.quoteArray = response.data.quotes
                 this.numQuotes = this.quoteArray.length
                 this.getQuote()
@@ -76,7 +78,17 @@ export default {
         }
     },
     beforeMount() {
-        this.loadQuotes()
+        const quotes = sessionStorage.getItem('quotes');
+
+        if(!quotes || quotes === null){
+            this.loadQuotes()
+
+            return;
+        }
+
+        this.quoteArray = JSON.parse(quotes) as Array<Quote>
+        this.numQuotes = this.quoteArray.length
+        this.getQuote()
     }
 }
 </script>
