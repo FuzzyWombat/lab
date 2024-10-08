@@ -29,7 +29,7 @@ init({
     remotes: [
         { name: 'Vue', entry: `http://localhost:3001/mf-manifest.json` },
         { name: 'Legacy', entry: `http://localhost:3002/mf-manifest.json` },
-        //Remote entry goes here?
+        //Remote SAlt COmponent goes here?
     ],
     shared: {},
     plugins: [],

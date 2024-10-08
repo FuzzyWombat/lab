@@ -15,7 +15,7 @@ import VueRemote from './routes/VueRemote';
 import LegacyRemote from './routes/LegacyRemote';
 //Salt Route to be worked on
 
-//import SaltRemote from './routes/SaltRemote
+//import SaltRemote from './routes/SaltRemote'
 
 export function App() {
     console.log('container: ', React.version);
@@ -48,12 +48,10 @@ export function App() {
                     element: <VueRemote />,
                 },
                 /*
-                uncomment to add route
                 {
-                    path: '/lab,
+                    path: '/lab',
                     element: <SaltRemote />,
                 },
-
                 */
             ],
         },
