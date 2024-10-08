@@ -85,17 +85,21 @@ function WrappedLegacy() {
     return (
         <div className='flex flex-col flex-grow items-center justify-center w-full' style={{ height: 750 }}>
             <div style={{ padding: 24, fontSize: 18 }}>
-                <b>{`Cross Communication Event Demo (Remote API Fetch & React Version:${React.version})`}</b>
+                <b>{`Cross Communication Event Demo (Remote '/crosser' API Fetch & React Version:${React.version})`}</b>
             </div>
-            <div className='flex flex-row'>
-                {cards.map((card) => {
-                    return (
-                        <div style={{ margin: 32 }}>
-                            <LegacyCard key={card.name} {...card} />
-                        </div>
-                    );
-                })}
-            </div>
+            {cards.length === 0 ? (
+                <button onClick={() => fetchCards()}>Refetch</button>
+            ) : (
+                <div className='flex flex-row'>
+                    {cards.map((card) => {
+                        return (
+                            <div style={{ margin: 32 }}>
+                                <LegacyCard key={card.name} {...card} />
+                            </div>
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 }
