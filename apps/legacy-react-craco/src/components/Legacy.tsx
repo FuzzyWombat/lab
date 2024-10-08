@@ -83,7 +83,7 @@ function WrappedLegacy() {
         );
 
     return (
-        <div className='flex flex-col flex-grow items-center justify-center w-full' style={{ height: 750 }}>
+        <div className='flex flex-col flex-grow items-center justify-center w-full' style={{ height: 700 }}>
             <div style={{ padding: 24, fontSize: 18 }}>
                 <b>{`Cross Communication Demo (Remote '/crosser' API Fetch & React Version:${React.version}) w/Event Trigger`}</b>
             </div>

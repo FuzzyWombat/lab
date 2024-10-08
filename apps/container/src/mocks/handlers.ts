@@ -1,6 +1,8 @@
 import { http, HttpResponse } from 'msw';
 //Mock Database
 import { db } from './database/db';
+//mock Quotes
+import quotes from './data/quotes';
 
 export const handlers = [
     http.get(`${window.location.origin}/stats`, async () => {
@@ -112,6 +114,16 @@ export const handlers = [
             }
 
             return new HttpResponse(null, { status: 200 });
+        } catch (error) {
+            console.log(error);
+
+            return HttpResponse.error();
+        }
+    }),
+    //Normally you would never do this but this is too simplify the example for the lab
+    http.get(`${window.location.origin}/quotes`, async () => {
+        try {
+            return HttpResponse.json({data: quotes});
         } catch (error) {
             console.log(error);
 
