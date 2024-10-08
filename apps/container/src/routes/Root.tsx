@@ -8,7 +8,8 @@ import NavigationBar from '../components/navigation/NavigationBar';
 const NAV_ROUTES: Array<{ label: string; link: string }> = [
     { label: 'Home', link: '/' },
     { label: 'Legacy React', link: '/legacy' },
-    { label: 'Quote', link: '/quote' },
+    { label: 'Vue Quote', link: '/quote' },
+    { label: 'Lab Remote', link: '/lab' }
 ];
 
 export const Root: React.FC = () => {
@@ -19,6 +20,7 @@ export const Root: React.FC = () => {
                 <GridItem
                     colSpan={{ xs: 2, sm: 2, md: 3, lg: 2, xl: 2 }}
                     style={{ borderRight: 'solid', borderRightColor: 'gainsboro' }}
+                    className='bg-gray-50'
                 >
                     <NavigationBar linkRoutes={NAV_ROUTES} />
                 </GridItem>

@@ -29,6 +29,7 @@ export const SubHeader: React.FC = () => {
             justify='center'
             gap={20}
             style={{ borderBottom: 'solid', borderBottomColor: 'gainsboro', paddingBottom: 16 }}
+            className='bg-gray-50'
         >
             <StackLayout dir='column'>
                 <FlexLayout dir='row' className='items-center justify-center'>

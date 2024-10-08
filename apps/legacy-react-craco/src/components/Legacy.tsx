@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Card, Button } from '@material-ui/core';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { Card } from '@material-ui/core';
 //React Adapter -> unable to properly npm link @lab/shared, so movd it into project
 import { ReactAdapter } from './ReactAdapter';
 

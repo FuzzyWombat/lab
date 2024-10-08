@@ -48,12 +48,10 @@ export function App() {
                     element: <VueRemote />,
                 },
                 /*
-                uncomment and place Salt Remote here
-
-                go to Root component and add path to Navigation Bar Array to link component
+                uncomment to add route
                 {
-                    path:,
-                    element: ,
+                    path: '/lab,
+                    element: <SaltRemote />,
                 },
 
                 */
