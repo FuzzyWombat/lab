@@ -26,7 +26,7 @@ module.exports = {
                     name: 'Legacy',
                     filename: 'remoteEntry.js',
                     exposes: {
-                        './Test': './src/components/Test',
+                        './Legacy': './src/components/Legacy',
                     },
                 }),
             ],

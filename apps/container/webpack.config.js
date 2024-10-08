@@ -6,6 +6,11 @@ module.exports = {
     output: {
         path: join(__dirname, '../../dist/apps/container'),
     },
+    resolve: {
+        fallback: {
+            util: false,
+        },
+    },
     devServer: {
         port: 'auto',
         historyApiFallback: {

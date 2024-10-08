@@ -9,7 +9,7 @@ import SubHeader from '../components/header/SubHeader';
 
 const LegacyRemote = lazy(
     () =>
-        loadRemote('Legacy/Test', { from: 'runtime' }) as Promise<{
+        loadRemote('Legacy/Legacy', { from: 'runtime' }) as Promise<{
             default: React.ComponentType<Record<string, unknown>>;
         }>
 );
