@@ -10,13 +10,24 @@ ds tool install nodejs20
 
 of if running from home, install node from website
 
+### Repo Setup
+
+at root of package directory
+
+```sh
+npm install
+```
+this will install allpackages for the first time
+
+### Starting Server
+
 To run the demo dev server for your, use:
 
 ```sh
 npm run start:demo
 ```
 
-### WARNING: if nx is having issues run these sets of commands instead to get demo started and seperate th nx-daemon from the other build tools
+### WARNING: if nx is having issues run commands here
 
 Open 2 terminals
 
