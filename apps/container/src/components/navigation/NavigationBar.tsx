@@ -4,17 +4,17 @@ import { SaltProvider, StackLayout, NavigationItem } from '@salt-ds/core';
 
 export const NavigationBar: React.FC<{ linkRoutes: Array<{ link: string; label: string }> }> = ({ linkRoutes }) => {
     const [active, setActive] = useState(() => {
-        const active = sessionStorage.getItem('active')
+        const active = sessionStorage.getItem('active');
 
-        if(!active || active === null){
-            return 'Home'
+        if (!active || active === null) {
+            return 'Home';
         }
 
-        return active
+        return active;
     });
 
     const handleNavigation = useCallback((event: React.SyntheticEvent, label: string) => {
-        sessionStorage.setItem('active', label)
+        sessionStorage.setItem('active', label);
 
         setActive(() => label);
     }, []);

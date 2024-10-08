@@ -22,18 +22,33 @@ export const handlers = [
         }
     }),
     http.get(`${window.location.origin}/crossers`, async () => {
+        try {
+            const crossers = db.allCrossers.findFirst({
+                where: {
+                    key: {
+                        equals: 5,
+                    },
+                },
+            });
+
+            return HttpResponse.json({
+                crossers,
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }),
+    http.post(`${window.location.origin}/cross/:id`, async ({ request, params }) => {
+        const { id } = params;
+        
         return HttpResponse.json({
             crossed: 0,
             notCrossed: 0,
         });
     }),
-    http.post(`${window.location.origin}/cross`, async () => {
-        return HttpResponse.json({
-            crossed: 0,
-            notCrossed: 0,
-        });
-    }),
-    http.post(`${window.location.origin}/uncross`, async () => {
+    http.post(`${window.location.origin}/uncross/:id`, async ({ request, params }) => {
+        const { id } = params;
+
         return HttpResponse.json({
             crossed: 0,
             notCrossed: 0,
