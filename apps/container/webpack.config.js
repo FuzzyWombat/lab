@@ -25,7 +25,7 @@ module.exports = {
             main: './src/index.ts',
             index: './src/index.html',
             baseHref: '/',
-            assets: ['./src/assets/mockServiceWorker.js'],
+            assets: ['./src/mockServiceWorker.js'],
             styles: [],
             outputHashing: process.env['NODE_ENV'] === 'production' ? 'all' : 'none',
             optimization: process.env['NODE_ENV'] === 'production',

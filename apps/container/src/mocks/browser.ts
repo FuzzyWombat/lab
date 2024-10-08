@@ -5,8 +5,4 @@ import { handlers } from './handlers';
 
 const worker = setupWorker(...handlers);
 
-worker.start({
-    serviceWorker: {
-        url: '/assets/mockServiceWorker.js',
-    },
-});
+worker.start();

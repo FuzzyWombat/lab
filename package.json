@@ -80,7 +80,7 @@
   ],
   "msw": {
     "workerDirectory": [
-      "apps\\container\\src\\assets"
+      "apps\\container\\src"
     ]
   }
 }

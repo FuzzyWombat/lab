@@ -19,6 +19,7 @@ import LegacyRemote from './routes/LegacyRemote';
 
 export function App() {
     const [isReady, setReady] = useState(false);
+
     console.log('container: ', React.version);
 
     useEffect(() => {

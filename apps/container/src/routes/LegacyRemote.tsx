@@ -5,6 +5,7 @@ import { ErrorBoundary } from '@lab/shared';
 //Custom Components
 import Spinner from '../components/common/Spinner';
 import Fallback from '../components/common/FallBack';
+import SubHeader from '../components/header/SubHeader';
 
 const LegacyRemote = lazy(
     () =>
@@ -16,6 +17,7 @@ const LegacyRemote = lazy(
 export default () => {
     return (
         <ErrorBoundary fallback={<Fallback />}>
+            <SubHeader />
             <Suspense fallback={<Spinner />}>
                 <LegacyRemote />
             </Suspense>
